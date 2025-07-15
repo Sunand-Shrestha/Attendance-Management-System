@@ -1,23 +1,24 @@
 Xamp / phpmyadmin ma this do :
-CREATE DATABASE attendance_system;
-USE attendance_system;
+CREATE DATABASE attendance_system;<br>
+USE attendance_system;<br>
 
-CREATE TABLE students (
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    student_id VARCHAR(20) UNIQUE NOT NULL,
-    name VARCHAR(100) NOT NULL,
-    email VARCHAR(100),
-    phone VARCHAR(15)
+CREATE TABLE students (<br>
+    id INT PRIMARY KEY AUTO_INCREMENT,<br>
+    student_id VARCHAR(20) UNIQUE NOT NULL,<br>
+    name VARCHAR(100) NOT NULL,<br>
+    email VARCHAR(100),<br>
+    phone VARCHAR(15)<br>
 );
 
-CREATE TABLE attendance (
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    student_id VARCHAR(20),
-    date DATE NOT NULL,
-    status ENUM('Present', 'Absent') NOT NULL,
-    time_in TIME,
-    FOREIGN KEY (student_id) REFERENCES students(student_id)
-);
+CREATE TABLE attendance (<br>
+    id INT PRIMARY KEY AUTO_INCREMENT,<br>
+    student_id VARCHAR(20),<br>
+    date DATE NOT NULL,<br>
+    status ENUM('Present', 'Absent') NOT NULL,<br>
+    time_in TIME,<br>
+    FOREIGN KEY (student_id) REFERENCES students(student_id)<br>
+);<br>
+
 
 -- Sample data (optional)
 INSERT INTO students VALUES 
