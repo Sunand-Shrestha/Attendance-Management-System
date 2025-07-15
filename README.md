@@ -1,4 +1,4 @@
-Xamp / phpmyadmin ma this do :
+Xamp / phpmyadmin ma this do :<br>
 CREATE DATABASE attendance_system;<br>
 USE attendance_system;<br>
 
