@@ -1,3 +1,9 @@
+Adding MySQL Connector JAR:<br>
+Download MySQL Connector/J from MySQL official site<br>
+In IntelliJ: File → Project Structure → Libraries → + → Java → Select the JAR file<br>
+<br><br>
+
+
 Xamp / phpmyadmin ma this do :<br>
 CREATE DATABASE attendance_system;<br>
 USE attendance_system;<br>
