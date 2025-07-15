@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<TabPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.attendance.attendancemanagementsystem.controller.MainController">
+    <tabs>
+        <Tab text="Student Management">
+            <content>
+                <VBox spacing="10" style="-fx-padding: 20">
+                    <HBox spacing="10">
+                        <VBox spacing="5">
+                            <Label text="Student ID:" />
+                            <TextField fx:id="studentIdField" prefWidth="150" />
+                        </VBox>
+                        <VBox spacing="5">
+                            <Label text="Name:" />
+                            <TextField fx:id="nameField" prefWidth="200" />
+                        </VBox>
+                        <VBox spacing="5">
+                            <Label text="Email:" />
+                            <TextField fx:id="emailField" prefWidth="200" />
+                        </VBox>
+                        <VBox spacing="5">
+                            <Label text="Phone:" />
+                            <TextField fx:id="phoneField" prefWidth="150" />
+                        </VBox>
+                    </HBox>
+                    <HBox spacing="10">
+                        <Button text="Add Student" onAction="#addStudent" style="-fx-background-color: #4CAF50; -fx-text-fill: white;" />
+                        <Button text="Update Student" onAction="#updateStudent" style="-fx-background-color: #2196F3; -fx-text-fill: white;" />
+                        <Button text="Delete Student" onAction="#deleteStudent" style="-fx-background-color: #f44336; -fx-text-fill: white;" />
+                    </HBox>
+                    <TableView fx:id="studentTable" onMouseClicked="#onStudentSelect" prefHeight="400">
+                        <columns>
+                            <TableColumn fx:id="colStudentId" text="Student ID" prefWidth="100" />
+                            <TableColumn fx:id="colName" text="Name" prefWidth="200" />
+                            <TableColumn fx:id="colEmail" text="Email" prefWidth="200" />
+                            <TableColumn fx:id="colPhone" text="Phone" prefWidth="150" />
+                        </columns>
+                    </TableView>
+                </VBox>
+            </content>
+        </Tab>
+        <Tab text="Attendance Management">
+            <content>
+                <VBox spacing="10" style="-fx-padding: 20">
+                    <HBox spacing="10">
+                        <VBox spacing="5">
+                            <Label text="Student:" />
+                            <ComboBox fx:id="attendanceStudentCombo" prefWidth="150" />
+                        </VBox>
+                        <VBox spacing="5">
+                            <Label text="Status:" />
+                            <ComboBox fx:id="statusCombo" prefWidth="100" />
+                        </VBox>
+                        <VBox spacing="5">
+                            <Label text="Date:" />
+                            <DatePicker fx:id="datePicker" />
+                        </VBox>
+                    </HBox>
+                    <HBox spacing="10">
+                        <Button text="Mark Attendance" onAction="#markAttendance" style="-fx-background-color: #4CAF50; -fx-text-fill: white;" />
+                        <Button text="Load Attendance" onAction="#loadAttendance" style="-fx-background-color: #2196F3; -fx-text-fill: white;" />
+                    </HBox>
+                    <TableView fx:id="attendanceTable" prefHeight="400">
+                        <columns>
+                            <TableColumn fx:id="colAttStudentId" text="Student ID" prefWidth="100" />
+                            <TableColumn fx:id="colDate" text="Date" prefWidth="100" />
+                            <TableColumn fx:id="colStatus" text="Status" prefWidth="100" />
+                            <TableColumn fx:id="colTimeIn" text="Time In" prefWidth="100" />
+                        </columns>
+                    </TableView>
+                </VBox>
+            </content>
+        </Tab>
+    </tabs>
+</TabPane>
